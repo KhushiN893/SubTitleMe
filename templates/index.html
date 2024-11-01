@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcribe Video to Text</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Transcriber</h1>
+        <div>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Get Started</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Transcribe Video to Text</h1>
+         
+        <video id="videoPlayer" controls style="display: none;"></video>
+        <div class="upload-container">
+            <div class="upload-section">
+                <p>Upload your file</p>
+                <p id="fileName" style="color: #a6a9b6; margin-top: 10px;"></p>
+                <input type="file" id="videoFile" accept="video/*" onchange="displayFileName()">
+                <label for="videoFile">Choose File</label>
+                <br>
+                <button onclick="uploadFile()">Upload</button>
+            </div>
+
+            <div class="upload-section">
+                <p>Or enter video URL</p>
+                <input type="text" id="videoUrl" class="url-input" placeholder="Enter video URL">
+                <button onclick="uploadUrl()">Upload Video Link</button>
+            </div>
+        </div>
+
+        <p id="response"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
